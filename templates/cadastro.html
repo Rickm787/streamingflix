@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+{% block conteudo %}
+<h1 class="comments-count">Cadastro</h1>
+
+              <div class="reply-form">
+
+<!--                <h4>Leave a Reply</h4>-->
+<!--                <p>Your email address will not be published. Required fields are marked * </p>-->
+                <form action="{{ url_for('cadastrar') }}" method="POST">
+                  <div class="row">
+                    <div class="col form-group">
+                      <label for="nome">Nome</label>
+                      <input name="nome" type="text" class="form-control" placeholder="Seu nome" required>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <label for="bairro">Bairro</label>
+                      <input name="bairro" type="text" class="form-control" placeholder="" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <label for="cidade">Cidade</label>
+                      <input name="cidade" type="text" class="form-control" placeholder="" required>
+                    </div>
+                    <div class="row">
+                      <div class="col form-group">
+                        <label for="Rua">Rua</label>
+                        <input name="rua" type="text" class="form-control" placeholder="" required>
+                      </div>
+                      <div class="row">
+                        <div class="col form-group">
+                          <label for="cep">cep</label>
+                          <input name="cep" type="text" class="form-control" placeholder="" required>
+                        </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <label for="email">E-mail</label>
+                      <input name="email" type="text" class="form-control" placeholder="Seu e-mail..." required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <label for="senha">Senha</label>
+                      <input name="senha" type="password" class="form-control" required>
+                    </div>
+                  </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                  </div>
+                </form>
+              </div>
+
+
+{% endblock conteudo %}

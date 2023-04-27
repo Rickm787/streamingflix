@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+{% block conteudo %}
+<h1 class="comments-count">Catalogo</h1>
+
+              <div class="reply-form">
+
+<!--                <h4>Leave a Reply</h4>-->
+<!--                <p>Your email address will not be published. Required fields are marked * </p>-->
+                <form action="{{ url_for('cadastro_catalogo') }}" method="POST">
+                  <div class="row">
+                    <div class="col form-group">
+                      <label for="nome">Nome</label>
+                      <input name="nome" id="nome" type="text" class="form-control" placeholder="" required>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <label for="genero">Genero</label>
+                      <input name="genero" type="text" id="genero" class="form-control" placeholder="" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <label for="sinopse">sinopse</label>
+                      <input name="sinopse" type="text" id="sinopse" class="form-control" placeholder="" required>
+                    </div>
+                    <div class="row">
+                      <div class="col form-group">
+                        <label for="duracao">duraçao</label>
+                        <input name="duracao" type="text" id="duracao" class="form-control" placeholder="" required>
+                      </div>
+                         <div class="row">
+                        <div class="col form-group">
+                          <label for="dt_lancamento">data de lançamento</label>
+                          <input name="dt_lancamento" id="dt_lancamento" type="text" class="form-control" placeholder="" required>
+                        </div>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                  </div>
+                </form>
+              </div>
+
+
+{% endblock conteudo %}
+
+
+
+
+
+

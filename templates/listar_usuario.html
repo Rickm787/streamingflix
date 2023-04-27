@@ -1,0 +1,48 @@
+{% extends "template.html" %}
+{% block conteudo %}
+<h4 class="comments-count">listar usuario</h4>
+  <div class="reply-form">
+
+    <table class="table">
+      <thead>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>email</th>
+        <th>rua</th>
+        <th>bairro</th>
+        <th>cep</th>
+        <th>cidade</th>
+        <th>senha</th>
+
+      </thead>
+      <tbody>
+      {% if usuario %}
+        {% for p in usuario %}
+          <tr>
+            <td>{{ p[0] }}</td>
+            <td>{{ p[1] }}</td>
+            <td>{{ p[2] }}</td>
+            <td>{{ p[3] }}</td>
+            <td>{{ p[4] }}</td>
+            <td>{{ p[5] }}</td>
+            <td>{{ p[6] }}</td>
+            <td>{{ p[7] }}</td>
+            <td>Excluir | <a href="{{ url_for('atualizar_usuario', codigo=p[0]) }}">Editar</a></td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <p>Nenhum item foi encontrado</p>
+      {% endif %}
+      </tbody>
+    </table>
+  </div>
+{% endblock conteudo %}
+
+
+
+
+
+
+
+
+

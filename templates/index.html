@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title> Streaming.flix</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="https://img.myloview.com.br/posters/play-button-icon-vector-logo-700-160467846.jpg" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="static/lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="static/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+            <small class="fa fa-map-marker-alt text-primary me-2"></small>
+            <small>123 Street, New York, USA</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center py-3">
+            <small class="far fa-clock text-primary me-2"></small>
+            <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+          </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+            <small class="fa fa-phone-alt text-primary me-2"></small>
+            <small>+012 345 6789</small>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center">
+            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-sm-square bg-white text-primary me-0" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <a href="index.html" class="navbar-brand p-0">
+        <img class="img-fluid me-3" src="https://img.myloview.com.br/posters/play-button-icon-vector-logo-700-160467846.jpg" alt="Icon" />
+        <h1 class="m-0 text-primary">Streaming.flix</h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="/cadastro" class="nav-item nav-link">Cadastro</a>
+          <a href="/login" class="nav-item nav-link">login</a>
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Pages</a
+            >
+            <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+              <a href="/cadastro_catalogo" class="dropdown-item">catalogo</a>
+              <a href="/listar_catalogo" class="dropdown-item">Listar_catalogo</a>
+              <a href="/listar_plano" class="dropdown-item">listar</a>
+              <a href="/cadastrar_plano" class="dropdown-item">Plano</a>
+              <a href="404.html" class="dropdown-item">404 Page</a>
+            </div>
+          </div>
+          <a href="/listar_usuario" class="nav-item nav-link"> Listar/usuarios </a>
+        </div>
+        <a href="" class="btn btn-primary"
+          >Buy Ticket<i class="fa fa-arrow-right ms-3"></i
+        ></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    {% block conteudo %}
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-dark p-0 mb-5">
+      <div class="row g-0 flex-column-reverse flex-lg-row">
+        <div class="col-lg-6 p-0 wow fadeIn" data-wow-delay="0.1s">
+          <div
+            class="header-bg h-100 d-flex flex-column justify-content-center p-5"
+          >
+            <h1 class="display-4 text-light mb-5">
+             Aqui você encontra séries e filmes para assistir no conforto da sua casa
+            </h1>
+            <div class="d-flex align-items-center pt-4 animated slideInDown">
+              <a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5"
+                >Read More</a
+              >
+              <button
+                type="button"
+                class="btn-play"
+                data-bs-toggle="modal"
+                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc"
+                data-bs-target="#videoModal"
+              >
+                <span></span>
+              </button>
+              <h6 class="text-white m-0 ms-4 d-none d-sm-block">Watch Video</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div class="owl-carousel header-carousel">
+            <div class="owl-carousel-item">
+              <img class="img-fluid" src="img/carousel-1.jpg" alt="" />
+            </div>
+            <div class="owl-carousel-item">
+              <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
+            </div>
+            <div class="owl-carousel-item">
+              <img class="img-fluid" src="img/carousel-3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Video Modal Start -->
+   
+    <!-- Video Modal End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <p><span class="text-primary me-2">#</span>Seja bem vindo(a)</p>
+            <h1 class="display-5 mb-4">
+              Por que você deve visitar
+              <span class="text-primary">Streaming</span> !
+            </h1>
+            <p class="mb-4">
+              Pois temos os melhores filmes e séries para oferecer a você. Venha conferir ás novidades.
+            </p>
+            <h5 class="mb-3">
+              <i class="far fa-check-circle text-primary me-3"></i>Conteudo novo toda semana
+            </h5>
+            <h5 class="mb-3">
+              <i class="far fa-check-circle text-primary me-3"></i>Melhor qualidade de reprodução do mercado
+            </h5>
+            <a class="btn btn-primary py-3 px-5 mt-3" href="">Entre aqui</a>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="img-border">
+              <img class="img-fluid" src="https://cinemacao.com/wp-content/uploads/2014/08/baixar-posteres-filme-gratis.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Facts Start -->
+    <div
+      class="container-xxl bg-primary facts my-5 py-5 wow fadeInUp"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-4">
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.1s"
+          >
+            <i class="fa fa-paw fa-3x text-primary mb-3"></i>
+            <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+            <p class="text-white mb-0">Total Animal</p>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.3s"
+          >
+            <i class="fa fa-users fa-3x text-primary mb-3"></i>
+            <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+            <p class="text-white mb-0">Daily Vigitors</p>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.5s"
+          >
+            <i class="fa fa-certificate fa-3x text-primary mb-3"></i>
+            <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+            <p class="text-white mb-0">Total Membership</p>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.7s"
+          >
+            <i class="fa fa-shield-alt fa-3x text-primary mb-3"></i>
+            <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+            <p class="text-white mb-0">Save Wild Life</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Facts End -->
+
+    <!-- Service Start -->
+          
+    <!-- Service End -->
+
+    <!-- Animal Start -->
+             
+    <!-- Animal End -->
+
+    <!-- Visiting Hours Start -->
+
+    <!-- Visiting Hours End -->
+
+    <!-- Membership Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div
+          class="row g-5 mb-5 align-items-end wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <div class="col-lg-6">
+            <p><span class="text-primary me-2">#</span>Membership</p>
+            <h1 class="display-5 mb-0">
+              Venha fazer parte da nossa familia 
+              <span class="text-primary">Streaming.flix</span>
+            </h1>
+          </div>
+          <div class="col-lg-6 text-lg-end">
+            <a class="btn btn-primary py-3 px-5" href="">Special Pricing</a>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="membership-item position-relative">
+              <img class="img-fluid" src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2022/09/16/1265018637-filmes-homem-aranha.jpg" alt="" />
+              <h1 class="display-1">01</h1>
+              <h4 class="text-white mb-3">Pipoca</h4>
+              <h3 class="text-primary mb-4">$25.00</h3>
+              <p><i class="fa fa-check text-primary me-3"></i>10% disconto</p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>2 adultos e 2 crianças
+              </p>
+              <a class="btn btn-outline-light px-4 mt-3" href="">assinar</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="membership-item position-relative">
+              <img class="img-fluid" src="data:image/jpeg;base64,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" alt="" />
+              <h1 class="display-1">02</h1>
+              <h4 class="text-white mb-3">Cinema</h4>
+              <h3 class="text-primary mb-4">$50.00</h3>
+              <p><i class="fa fa-check text-primary me-3"></i>15% disconto</p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>4 adultos e 4 crianças
+              </p>
+              <a class="btn btn-outline-light px-4 mt-3" href="">assinar</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="membership-item position-relative">
+              <img class="img-fluid" src="https://br.web.img2.acsta.net/c_310_420/pictures/22/12/27/14/37/5994557.jpg" alt="" />
+              <h1 class="display-1">03</h1>
+              <h4 class="text-white mb-3"> Cinema Premium</h4>
+              <h3 class="text-primary mb-4">$75.00</h3>
+              <p><i class="fa fa-check text-primary me-3"></i>20% disconto</p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>6 adultos e 6 crianças
+              </p>
+             
+              <a class="btn btn-outline-light px-4 mt-3" href="">assinar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Membership End -->
+
+    <!-- Testimonial Start -->
+    
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Address</h5>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>info@example.com
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Quick Links</h5>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Our Services</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">Support</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Popular Links</h5>
+            <a class="btn btn-link" href="">About Us</a>
+            <a class="btn btn-link" href="">Contact Us</a>
+            <a class="btn btn-link" href="">Our Services</a>
+            <a class="btn btn-link" href="">Terms & Condition</a>
+            <a class="btn btn-link" href="">Support</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Newsletter</h5>
+            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input
+                class="form-control border-0 w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Your email"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                SignUp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a class="border-bottom" href="#">Your Site Name</a>, All
+              Right Reserved.
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+              Designed By
+              <a class="border-bottom" href="https://htmlcodex.com"
+                >HTML Codex</a
+              >
+              <br />Distributed By:
+              <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    {% endblock conteudo %}
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/wow/wow.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/lib/counterup/counterup.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

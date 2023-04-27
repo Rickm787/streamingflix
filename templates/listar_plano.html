@@ -1,0 +1,30 @@
+% extends "index.html" %}
+{% block conteudo %}
+<h4 class="comments-count"> listar plano</h4>
+  <div class="reply-form">
+
+    <table class="table">
+      <thead>
+        <th>Código</th>
+        <th>valor</th>
+        <th>categoria</th>
+
+      </thead>
+      <tbody>
+      {% if plano %}
+        {% for p in plano %}
+          <tr>
+            <td>{{ p[0] }}</td>
+            <td>{{ p[1] }}</td>
+            <td>{{ p[2] }}</td>
+            <td>Excluir | <a href="{{ url_for('atualizar_plano', codigo=p[0]) }}">Editar</a></td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <p>Nenhum item foi encontrado</p>
+      {% endif %}
+      </tbody>
+    </table>
+  </div>
+{% endblock conteudo %}
+
