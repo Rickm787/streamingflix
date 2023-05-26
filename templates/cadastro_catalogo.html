@@ -1,6 +1,6 @@
 {% extends "index.html" %}
 {% block conteudo %}
-<h1 class="comments-count">Catalogo</h1>
+<h1 class="comments-count">Cadastrar Catalogo</h1>
 
               <div class="reply-form">
 
@@ -22,18 +22,18 @@
                   </div>
                   <div class="row">
                     <div class="col form-group">
-                      <label for="sinopse">sinopse</label>
+                      <label for="sinopse">Sinopse</label>
                       <input name="sinopse" type="text" id="sinopse" class="form-control" placeholder="" required>
                     </div>
                     <div class="row">
                       <div class="col form-group">
-                        <label for="duracao">duraçao</label>
-                        <input name="duracao" type="text" id="duracao" class="form-control" placeholder="" required>
+                        <label for="duracao">Duração</label>
+                        <input name="duracao" type="number" id="duracao" class="form-control duration" placeholder="" required>
                       </div>
                          <div class="row">
                         <div class="col form-group">
-                          <label for="dt_lancamento">data de lançamento</label>
-                          <input name="dt_lancamento" id="dt_lancamento" type="text" class="form-control" placeholder="" required>
+                          <label for="dt_lancamento">Data de lançamento</label>
+                          <input name="dt_lancamento" id="dt_lancamento" type="date" class="form-control date" placeholder="" required>
                         </div>
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
                   </div>
