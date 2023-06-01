@@ -125,14 +125,14 @@ def cadastro_catalogo():
     return render_template("cadastro_catalogo.html", titulo=vartitulo)
 
 
-@app.route('/listar_Catalogo', methods=['GET', ])
+@app.route('/listar_catalogo', methods=['GET', ])
 def listar_Catalogo():
     dao = CatalogoDAO(get_db())
     catalogo_db = dao.listar()
     return render_template("listar_catalogo.html", catalogo=catalogo_db)
 
 
-@app.route('/cadastrar_Plano', methods=['GET', 'POST'])
+@app.route('/cadastrar_plano', methods=['GET', 'POST'])
 def cadastrar_Plano():
     if request.method == "POST":
         valor = request.form['valor']
@@ -152,7 +152,7 @@ def cadastrar_Plano():
     return render_template("plano-cadastrar.html", titulo=vartitulo)
 
 
-@app.route('/listar_Plano', methods=['GET', ])
+@app.route('/listar_plano', methods=['GET', ])
 def listar_Plano():
     dao = PlanoDAO(get_db())
     plano_db = dao.listar()
@@ -218,7 +218,7 @@ def login():
                 'email': usuario[1],
                 'senha': usuario[9],
             }
-            return redirect(url_for('painel'))
+            return redirect(url_for('/painel'))
         else:
             flash("Erro ao efetuar login!", "danger")
 
@@ -244,7 +244,7 @@ def service():
 
 @app.route('/painel')
 def painel():
-    return render_template("template.html", titulo="Painel")
+    return render_template("painel.html", titulo="Painel")
 
 
 if __name__ == '__main__':
